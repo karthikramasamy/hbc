@@ -1,0 +1,48 @@
+namespace  org.hbc.participant
+
+abstract participant HBCParticipant identified by participantKey {
+  o String          participantKey
+  o Contact         contact
+}
+
+concept Contact {
+  o String fName
+  o String lname
+  o String email
+}
+
+participant HBCNetworkAdmin extends HBCParticipant {
+  /** This is a concrete resource definition */
+}
+
+participant KaiserPhysician extends HBCParticipant {
+  o String  department
+}
+
+participant KaiserResearchApp extends HBCParticipant {
+  /** Additional Attributes */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Exercise-1
+ * Create a copy of v2 and call it v21
+ * In the 
+ */

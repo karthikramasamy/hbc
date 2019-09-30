@@ -1,0 +1,48 @@
+namespace org.hbc.piirecord
+
+/** PII Record is an HRC Asset*/
+
+asset PIIRecord identified by hbc_patient_id {
+  o String  hbc_patient_id
+  o String  hbc_provider_id
+  o String	patient_number      // given by provider
+
+  o String  ssn
+  o String  first_name
+  o String  last_name
+  o String  dob
+  o String  address
+  o String  city
+  o String  state
+  o String  zip
+  o String	race
+  o Gender	gender
+  o String	age
+  o String	weight
+}
+
+enum Gender {
+  o   MALE
+  o   FEMALE
+}
+
+transaction CreatePIIRecord {
+    o String  hbc_provider_id    
+    o String	patient_number
+    o String  ssn
+    o String  first_name
+    o String  last_name
+    o String  dob
+    o String  address
+    o String  city
+    o String  state
+    o String  zip
+    o String	race
+    o Gender	gender
+    o String	age
+    o String	weight
+}
+
+event PIIRecordCreated {
+  o String hbc_patient_id
+}

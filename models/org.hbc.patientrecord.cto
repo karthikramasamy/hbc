@@ -1,0 +1,126 @@
+namespace org.hbc.patientrecord
+
+/** Patient Record is an HRC Asset*/
+
+asset PatientRecord identified by hbc_record_id {
+  o String  hbc_record_id
+  o String  hbc_patient_id
+  o String	hbc_provider_id
+
+  o String	encounter_id
+  o String	patient_number     // provider specific
+  o String	race
+  o Gender	gender
+  o String	age
+  o String	weight
+  o Integer	admission_type_id
+  o Integer	discharge_disposition_id
+  o Integer	admission_source_id
+  o Integer	time_in_hospital
+  o String	payer_code
+  o String	medical_specialty
+  o Integer	num_lab_procedures
+  o Integer	num_procedures
+  o Integer	num_medications
+  o Integer	number_outpatient
+  o Integer	number_emergency
+  o Integer	number_inpatient
+  o String	diag_1
+  o String	diag_2
+  o String	diag_3
+  o Integer	number_diagnoses
+  o String	max_glu_serum
+  o String	A1Cresult
+  o String	metformin
+  o String	repaglinide
+  o String	nateglinide
+  o String	chlorpropamide
+  o String	glimepiride
+  o String	acetohexamide
+  o String	glipizide
+  o String	glyburide
+  o String	tolbutamide
+  o String	pioglitazone
+  o String	rosiglitazone
+  o String	acarbose
+  o String	miglitol
+  o String	troglitazone
+  o String	tolazamide
+  o String	examide
+  o String	citoglipton
+  o String	insulin
+  o String	glyburide_metformin
+  o String	glipizide_metformin
+  o String	glimepiride_pioglitazone
+  o String	metformin_rosiglitazone
+  o String	metformin_pioglitazone
+  o String	change
+  o String	diabetesMed
+  o String	readmitted
+}
+
+enum Gender {
+  o   MALE
+  o   FEMALE
+}
+
+
+transaction CreatePatientRecord {
+  o String  hbc_patient_id
+  o String	hbc_provider_id
+
+  o String	encounter_id
+  o String	patient_number
+  o String	race
+  o Gender	gender
+  o String	age
+  o String	weight
+  o Integer	admission_type_id
+  o Integer	discharge_disposition_id
+  o Integer	admission_source_id
+  o Integer	time_in_hospital
+  o String	payer_code
+  o String	medical_specialty
+  o Integer	num_lab_procedures
+  o Integer	num_procedures
+  o Integer	num_medications
+  o Integer	number_outpatient
+  o Integer	number_emergency
+  o Integer	number_inpatient
+  o String	diag_1
+  o String	diag_2
+  o String	diag_3
+  o Integer	number_diagnoses
+  o String	max_glu_serum
+  o String	A1Cresult
+  o String	metformin
+  o String	repaglinide
+  o String	nateglinide
+  o String	chlorpropamide
+  o String	glimepiride
+  o String	acetohexamide
+  o String	glipizide
+  o String	glyburide
+  o String	tolbutamide
+  o String	pioglitazone
+  o String	rosiglitazone
+  o String	acarbose
+  o String	miglitol
+  o String	troglitazone
+  o String	tolazamide
+  o String	examide
+  o String	citoglipton
+  o String	insulin
+  o String	glyburide_metformin
+  o String	glipizide_metformin
+  o String	glimepiride_pioglitazone
+  o String	metformin_rosiglitazone
+  o String	metformin_pioglitazone
+  o String	change
+  o String	diabetesMed
+  o String	readmitted
+}
+
+event PatientRecordCreated {
+  o String hbc_record_id
+}
